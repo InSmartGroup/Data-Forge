@@ -75,24 +75,3 @@ def get_emails_from_full_name(full_name: str, domain_name: str) -> list:
                f"{last_name}{first_name[0]}@{domain_name}"]
 
     return [i.lower() for i in options]
-
-
-if __name__ == "__main__":
-    url = "https://achievion.com/portfolio/ai-demand-forecasting-service.html"
-    # url = "https://www.coca-cola.com/ua/uk"
-    # url = "https://www.lockheedmartin.com/en-us/news.html"
-    # url = "https://www.cience.com/gtm-additional-channels/"
-    # url = "https://belkins.io/industries/construction"
-    # url = "https://belkins.org/industries/construction"
-    # url = "https://uni-ver-city.edu/program/"
-
-    company_name, domain_extension, full_domain_name = domain_breakdown(url, title_name=True)
-
-    company_profile = identify_company_profile(domain_extension)
-    print(company_profile)
-
-    # name = "Gregory Ostapenko"
-    name = "Alex Jacome"
-
-    email_addresses = get_emails_from_full_name(name, full_domain_name)
-    print(email_addresses)
