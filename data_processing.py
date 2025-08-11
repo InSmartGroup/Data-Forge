@@ -24,7 +24,7 @@ def domain_breakdown(website_url: str, title_name=False) -> tuple:
     domain_extension = company_domain_all[0][-1]
 
     if not title_name:
-        return company_name, domain_extension
+        return company_name, domain_extension, f"{company_name.lower()}.{domain_extension.lower()}"
     else:
         return company_name.title(), domain_extension, f"{company_name.lower()}.{domain_extension.lower()}"
 
